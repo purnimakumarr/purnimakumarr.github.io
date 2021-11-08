@@ -1,8 +1,5 @@
 //////////////////////////////////////////
-//////////////////////////////////////////
 // IMPLEMENT SMOOTH SCROLLING
-//////////////////////////////////////////
-//////////////////////////////////////////
 const allLinks = document.querySelectorAll(".nav-link:link");
 allLinks.forEach(function (a) {
   a.addEventListener("click", function (e) {
@@ -19,10 +16,7 @@ allLinks.forEach(function (a) {
 });
 
 //////////////////////////////////////////
-//////////////////////////////////////////
 // MAKE DESCRIPTION BUTTONS WORK
-//////////////////////////////////////////
-//////////////////////////////////////////
 const descShort = document.querySelector(".desc--short");
 const btnShort = document.querySelector(".btn--short");
 
@@ -58,3 +52,23 @@ btnLong.addEventListener("click", function () {
   descMed.classList.add("desc-show");
   descLong.classList.add("desc-show");
 });
+
+//////////////////////////////////////////
+// FIXING FLEXBOX GPA PROPERTY MISSING IN SAFARI VERSIONS
+const noFlexGap = function () {
+  const flex = document.createChild("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createChild("div"));
+  flex.appendChild(document.creatChild("div"));
+
+  document.body.appendChild(flex);
+
+  var isSupported = flex.scrollHeight === 1;
+  document.body.remove(flex);
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+};
+
+noFlexGap();
