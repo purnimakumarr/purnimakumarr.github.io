@@ -2,20 +2,13 @@
 /**** MEDIA QUERIES *****/
 /************************/
 @media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 =>50% */
+    font-size: 50%;
+  }
+
   .heading-primary {
     font-size: 3.6rem;
-  }
-
-  .main-navbar li {
-    font-size: 1.8rem;
-  }
-
-  .heading-secondary {
-    font-size: 1.8rem;
-  }
-
-  .skills li {
-    font-size: 1.4rem;
   }
 
   .project-tile {
@@ -30,10 +23,6 @@
 @media (max-width: 44em) {
   .welcome {
     margin-top: 0;
-  }
-
-  .desc {
-    font-size: 1.6rem;
   }
 
   .grid--5-cols {
@@ -96,33 +85,13 @@
     height: 100vh;
     transition: all 0.5s ease-in;
     background-color: rgb(194, 252, 247, 0.54);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
   }
 }
 
 @media (max-width: 34em) {
   .grid--5-cols {
     grid-template-columns: 1fr;
-  }
-
-  .project-tile:hover {
-    transform: scale(1);
-  }
-
-  .project-name {
-    font-size: 1.8rem;
-  }
-
-  .heading-primary {
-    font-size: 2.4rem;
-  }
-
-  .subheading {
-    font-size: 1.8rem;
-  }
-
-  .desc {
-    font-size: 1.4rem;
   }
 
   .certificates,
@@ -151,11 +120,6 @@
     row-gap: 2.4rem;
     justify-items: center;
     justify-content: center;
-  }
-
-  .link:link,
-  .link:visited {
-    font-size: 1.2rem;
   }
 
   footer p {
