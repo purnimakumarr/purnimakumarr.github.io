@@ -56,13 +56,13 @@ btnLong.addEventListener("click", function () {
 //////////////////////////////////////////
 // FIXING FLEXBOX GPA PROPERTY MISSING IN SAFARI VERSIONS
 const noFlexGap = function () {
-  const flex = document.createChild("div");
+  const flex = document.createElement("div");
   flex.style.display = "flex";
   flex.style.flexDirection = "column";
   flex.style.rowGap = "1px";
 
-  flex.appendChild(document.createChild("div"));
-  flex.appendChild(document.creatChild("div"));
+  flex.appendElement(document.createChild("div"));
+  flex.appendElement(document.creatChild("div"));
 
   document.body.appendChild(flex);
 
