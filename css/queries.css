@@ -1,27 +1,81 @@
 /************************/
 /**** MEDIA QUERIES *****/
 /************************/
-@media (max-width: 50em) {
-  .header {
-    justify-items: center;
+@media (max-width: 59em) {
+  .heading-primary {
+    font-size: 3.6rem;
   }
 
-  .grid--4-cols {
-    grid-template-columns: 1fr;
+  .main-navbar li {
+    font-size: 1.8rem;
+  }
+
+  .heading-secondary {
+    font-size: 1.8rem;
+  }
+
+  .skills li {
+    font-size: 1.4rem;
+  }
+
+  .project-tile {
+    padding: 2.4rem;
+  }
+
+  .project-box {
+    column-gap: 2.4rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .desc {
+    font-size: 1.6rem;
+  }
+
+  .grid--5-cols {
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 3.6rem;
   }
 
-  .certificates {
+  .certificates,
+  .frameworks {
+    grid-column: 2 / span 2;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3.6rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .grid--5-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .project-tile:hover {
+    transform: scale(1);
+  }
+
+  .project-name {
+    font-size: 1.8rem;
+  }
+
+  .certificates,
+  .frameworks {
     grid-column: 1 / -1;
   }
 
   .grid--3-cols {
     grid-template-columns: 1fr;
-    row-gap: 3.6rem;
   }
 
   .grid--2-cols {
     grid-template-columns: 1fr;
-    row-gap: 3.6rem;
+    row-gap: 2.4rem;
+  }
+
+  footer p {
+    font-size: 1.6rem;
   }
 }
