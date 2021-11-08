@@ -62,7 +62,7 @@ const noFlexGap = function () {
   flex.style.rowGap = "1px";
 
   flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.creatElement("div"));
+  flex.appendChild(document.createElement("div"));
 
   document.body.appendChild(flex);
 
