@@ -68,6 +68,8 @@ const noFlexGap = function () {
 
   var isSupported = flex.scrollHeight === 1;
   document.body.remove(flex);
+  console.log(isSupported);
+
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 };
 

@@ -308,6 +308,6 @@ footer p {
 /**** Fixing Safari flex gap  *****/
 /**********************************/
 
-.no-flexbox-gap .main-navlist:not(:last-child) {
+.no-flexbox-gap .navbar-list:not(:last-child) {
   margin-right: 3.6rem;
 }
