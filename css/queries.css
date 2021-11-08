@@ -15,23 +15,8 @@
     font-size: 1.8rem;
   }
 
-  .grid--5-cols {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 3.6rem;
-  }
-
-  .certificates,
-  .frameworks {
-    grid-column: 2 / span 2;
-  }
-
   .project-tile {
     padding: 2.4rem;
-  }
-
-  .grid--3-cols {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 3.6rem;
   }
 
   .project-box {
@@ -42,6 +27,21 @@
 @media (max-width: 44em) {
   .welcome {
     margin-top: 0;
+  }
+
+  .grid--5-cols {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3.6rem;
+  }
+
+  .certificates,
+  .frameworks {
+    grid-column: 2 / span 2;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3.6rem;
   }
 
   /* MOBILE NAVIGATION */
