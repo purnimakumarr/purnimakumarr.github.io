@@ -61,8 +61,8 @@ const noFlexGap = function () {
   flex.style.flexDirection = "column";
   flex.style.rowGap = "1px";
 
-  flex.appendElement(document.createChild("div"));
-  flex.appendElement(document.creatChild("div"));
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.creatElement("div"));
 
   document.body.appendChild(flex);
 
