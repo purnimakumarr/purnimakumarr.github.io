@@ -11,18 +11,8 @@
     font-size: 3.6rem;
   }
 
-  .project-tile {
-    padding: 2.4rem;
-  }
-
-  .project-box {
-    column-gap: 2.4rem;
-  }
-}
-
-@media (max-width: 44em) {
-  .welcome {
-    margin-top: 0;
+  .heading-secondary {
+    font-size: 1.8rem;
   }
 
   .grid--5-cols {
@@ -35,11 +25,26 @@
     grid-column: 2 / span 2;
   }
 
+  .project-tile {
+    padding: 2.4rem;
+  }
+
   .grid--3-cols {
     grid-template-columns: 1fr 1fr;
     row-gap: 3.6rem;
   }
 
+  .project-box {
+    column-gap: 2.4rem;
+  }
+}
+
+@media (max-width: 44em) {
+  .welcome {
+    margin-top: 0;
+  }
+
+  /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
   }
@@ -106,13 +111,6 @@
   .grid--2-cols {
     grid-template-columns: 1fr;
     row-gap: 2.4rem;
-  }
-
-  /* Mobile Navigation */
-  .main-navbar {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
   }
 
   .welcome-btns {
