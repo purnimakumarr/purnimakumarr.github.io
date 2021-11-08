@@ -1,5 +1,6 @@
 //////////////////////////////////////////
 // IMPLEMENT SMOOTH SCROLLING
+const headerEl = document.querySelector(".header");
 const allLinks = document.querySelectorAll(".nav-link:link");
 allLinks.forEach(function (a) {
   a.addEventListener("click", function (e) {
@@ -10,6 +11,8 @@ allLinks.forEach(function (a) {
       sectionEl.scrollIntoView({
         behavior: "smooth",
       });
+
+      headerEl.classList.toggle("nav-open");
     }
   });
   console.log("Hello");
@@ -51,6 +54,13 @@ btnLong.addEventListener("click", function () {
 
   descMed.classList.add("desc-show");
   descLong.classList.add("desc-show");
+});
+
+//////////////////////////////////////////
+// MAKING MOBILE NAVIAGTION WORK
+const btnEl = document.querySelector(".btn-mobile-nav");
+btnEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
 });
 
 //////////////////////////////////////////

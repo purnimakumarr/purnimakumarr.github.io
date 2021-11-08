@@ -7,12 +7,12 @@
   justify-items: end;
   align-content: center;
   background-color: #c2fcf7;
-  height: 8rem;
 
   position: fixed;
+  height: 8rem;
   top: 0;
-  left: 0;
-  right: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .main-navbar li {
@@ -44,28 +44,33 @@
 
 /* MOBILE NAVIGATION */
 
-/* .btn-mobile-nav {
+.btn-mobile-nav {
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 999;
 
   display: none;
+  margin-right: 2.4rem;
 }
 
 .icon {
   stroke: #040f0f;
-  width: 24px;
-  height: 24px;
-} */
+  width: 48px;
+  height: 48px;
+}
+
+.icon-cross {
+  display: none;
+}
 
 /*****************/
 /**** WELCOME *****/
 /*****************/
 
 .welcome {
-  margin-top: 8rem;
-  padding: 9.6rem 3.6rem 0 3.6rem;
-  margin-bottom: 9.6rem;
+  margin-top: 4.8rem;
+  padding: 9.6rem 3.6rem;
 }
 
 .subheading {
@@ -80,7 +85,7 @@
   column-gap: 2.4rem;
   margin-bottom: 2.4rem;
   align-items: center;
-  justify-items: center;
+  justify-items: start;
 }
 
 .btn {
@@ -133,12 +138,11 @@
 /*****************/
 
 .skills {
-  margin-bottom: 9.6rem;
-  padding: 0 3.6rem;
+  padding: 0 3.6rem 9.6rem 3.6rem;
 }
 
 .skills-box {
-  margin-bottom: 5.6rem;
+  padding-bottom: 5.6rem;
 }
 
 .skills ul {
@@ -165,12 +169,11 @@
 /**** PROJECTS *****/
 /*****************/
 .section-projects {
-  margin-bottom: 9.6rem;
-  padding: 0 3.6rem;
+  padding: 0 3.6rem 9.6rem 3.6rem;
 }
 
 .webpages {
-  margin-bottom: 4.8rem;
+  padding-bottom: 4.8rem;
 }
 
 .project-tile {
@@ -197,7 +200,7 @@
 }
 
 .pens {
-  margin-bottom: 5.6rem;
+  padding-bottom: 5.6rem;
 }
 
 .profile-links {
@@ -209,6 +212,7 @@
 /**** FOOTER *****/
 /*****************/
 footer {
+  margin-top: 3.6rem;
   border-top: 2px solid #f7f7f7;
   padding: 3.6rem;
 }
@@ -229,6 +233,10 @@ footer p {
 /**** Fixing Safari flex gap  *****/
 /**********************************/
 
-.no-flexbox-gap .navbar-list:not(:last-child) {
+.no-flexbox-gap .nav-link:not(:last-child) {
   margin-right: 3.6rem;
+}
+
+.no-flexbox-gap .skills li:not(:last-child) {
+  margin-bottom: 2.4rem;
 }
