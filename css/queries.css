@@ -1,6 +1,13 @@
 /************************/
 /**** MEDIA QUERIES *****/
 /************************/
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px = 56.25% */
+    font-size: 56.25%;
+  }
+}
+
 @media (max-width: 59em) {
   html {
     /* 8px / 16px = 0.5 =>50% */
