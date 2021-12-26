@@ -1,3 +1,6 @@
+const currentYearEl = (document.querySelector(".current-year").textContent =
+  new Date().getFullYear());
+
 //////////////////////////////////////////
 // IMPLEMENT SMOOTH SCROLLING
 const headerEl = document.querySelector(".header");
@@ -15,7 +18,31 @@ allLinks.forEach(function (a) {
       headerEl.classList.toggle("nav-open");
     }
   });
-  console.log("Hello");
+});
+
+//////////////////////////////////////////
+// IMPLEMENT SMART NAVIGATION
+lastScrollTop = 0;
+window.addEventListener("scroll", function () {
+  var currentPosition = window.pageYOffset || window.scrollY;
+
+  //   Top of the page
+  if (currentPosition == 0) {
+    document.body.classList.remove("sticky");
+  }
+
+  //Scrolled down
+  else if (currentPosition > lastScrollTop) {
+    document.body.classList.remove("sticky");
+  }
+
+  //scrolled up
+  else if (currentPosition < lastScrollTop) {
+    document.body.classList.add("sticky");
+  }
+
+  //update last scrolled position
+  lastScrollTop = currentPosition;
 });
 
 //////////////////////////////////////////

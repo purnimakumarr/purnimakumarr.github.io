@@ -8,11 +8,12 @@
   align-content: center;
   background-color: #c2fcf7;
 
-  position: fixed;
+  /* position: fixed; */
   height: 8rem;
-  top: 0;
-  bottom: 0;
+  /* top: 0;
+  bottom: 0; */
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .main-navbar li {
@@ -67,9 +68,12 @@
 /*****************/
 /**** WELCOME *****/
 /*****************/
+/* .welcome-section {
+  margin-top: 8rem;
+} */
 
 .welcome {
-  margin-top: 4.8rem;
+  /* margin-top: 4.8rem; */
   padding: 9.6rem 3.6rem;
 }
 
@@ -229,6 +233,13 @@ footer p {
   margin-bottom: 2.4rem;
 }
 
+footer .portfolio-link:link,
+footer .portfolio-link:visited {
+  color: #040f0f;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /***********************************/
 /**** Fixing Safari flex gap  *****/
 /**********************************/
@@ -239,4 +250,22 @@ footer p {
 
 .no-flexbox-gap .skills li:not(:last-child) {
   margin-bottom: 2.4rem;
+}
+
+/***********************************/
+/**** STICKY NAVIGATION  *****/
+/**********************************/
+
+.sticky .header {
+  position: fixed;
+  height: 8rem;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #c2fcf7;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .welcome {
+  margin-top: 8rem;
 }
