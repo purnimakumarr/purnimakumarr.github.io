@@ -3,44 +3,114 @@
 /*****************/
 
 .header {
-  display: grid;
-  justify-items: end;
-  align-content: center;
-  background-color: #c2fcf7;
+  background-color: var(--tint1);
 
-  /* position: fixed; */
   height: 8rem;
-  /* top: 0;
-  bottom: 0; */
   width: 100%;
   transition: all 0.3s ease-in-out;
+  padding: 1.2rem 4.8rem;
+
+  z-index: 999;
+}
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-navbar li {
   list-style: none;
-  font-weight: 600;
-  font-size: 2.4rem;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .navbar-list {
   display: flex;
-  gap: 3.6rem;
+  gap: 4.8rem;
   align-items: center;
+}
 
-  margin-right: 4.8rem;
+.logo:link,
+.logo:visited {
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.logo span {
+  color: #333;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.my-photo {
+  width: 6rem;
+  border-radius: 50%;
 }
 
 .nav-link:link,
 .nav-link:visited {
   text-decoration: none;
-  color: #040f0f;
+  color: #333;
+  position: relative;
 
   transition: all 0.3s;
+  z-index: 1;
+}
+
+.nav-link:link::before,
+.nav-link:visited::before {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+
+  transition: all 0.5s;
+
+  z-index: -1;
 }
 
 .nav-link:hover,
 .nav-link:active {
-  color: #4f5757;
+  color: var(--shade1);
+}
+
+.nav-link:hover::before,
+.nav-link:active::before {
+  width: 100%;
+}
+
+.nav-link--action:link,
+.nav-link--action:visited {
+  border: 3px solid var(--primary-color);
+  border-radius: 9px;
+  padding: 1.2rem 2.4rem;
+  color: var(--primary-color);
+}
+
+.nav-link--action:hover,
+.nav-link--action:active {
+  color: var(--white);
+}
+
+.nav-link--action:link::before,
+.nav-link--action:visited::before {
+  top: 0;
+  height: 100%;
+}
+
+.nav-link--action:hover::before,
+.nav-link--action:active::before {
+  width: 100%;
 }
 
 /* MOBILE NAVIGATION */
@@ -68,64 +138,68 @@
 /*****************/
 /**** WELCOME *****/
 /*****************/
-/* .welcome-section {
-  margin-top: 8rem;
-} */
-
 .welcome {
-  /* margin-top: 4.8rem; */
-  padding: 9.6rem 3.6rem;
+  padding: 0 3.6rem;
+  background-color: var(--tint1);
+  margin-bottom: 9.6rem;
+}
+
+.welcome .container {
+  display: flex;
+  align-items: center;
+  height: 90vh;
+}
+
+.heading-primary.main-heading {
+  text-transform: none;
+  font-size: 6rem;
 }
 
 .subheading {
-  font-weight: 300;
-  font-size: 3.6rem;
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 1.8;
   text-transform: uppercase;
+  color: #333;
 }
 
-.welcome-btns {
-  display: grid;
-  grid-template-columns: 10rem 10rem 10rem;
-  column-gap: 2.4rem;
-  margin-bottom: 2.4rem;
-  align-items: center;
-  justify-items: start;
+/*****************/
+/**** ABOUT *****/
+/*****************/
+
+.about {
+  padding: 9.6rem 3.6rem 0 3.6rem;
+  margin-bottom: 9.6rem;
+  text-align: center;
 }
 
-.btn {
-  border: none;
-  padding: 1.2rem 2.4rem;
-  background-color: #c9fbff;
-  font-size: 1.6rem;
-  font-weight: 700;
-  border-radius: 33px;
-  cursor: pointer;
-
-  transition: all 0.3s;
+.main-profile-wrapper {
+  padding: 12px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  width: 30%;
+  height: 30%;
+  margin: 0 auto 3.2rem auto;
 }
 
-.btn:hover {
-  background-color: #c2fcf7;
-  color: #000;
+.main-profile {
+  width: 100%;
+  border-radius: 50%;
 }
 
-.desc {
-  font-size: 1.8rem;
-  line-height: 1.5;
+.greeting-text {
+  font-size: 4.8rem;
+  color: #333;
+  margin-bottom: 3.6rem;
+}
+
+.description {
+  font-size: 2rem;
+  line-height: 1.8;
   margin-bottom: 1.2rem;
-  display: none;
 }
 
-.desc-show {
-  display: block;
-}
-
-.btn-selected,
-.btn-selected:hover {
-  background-color: #85bdbf;
-}
-
-.course-code-link:link,
+/* .course-code-link:link,
 .course-code-link:visited {
   color: #392427;
   font-weight: 500;
@@ -135,81 +209,188 @@
 .course-code-link:active,
 .course-code-link:hover {
   color: #230c0f;
-}
+} */
 
 /*****************/
 /**** SKILLS *****/
 /*****************/
 
 .skills {
-  padding: 0 3.6rem 9.6rem 3.6rem;
-}
-
-.skills-box {
-  padding-bottom: 5.6rem;
+  padding: 9.6rem 3.6rem 0 3.6rem;
+  margin-bottom: 9.6rem;
 }
 
 .skills ul {
   display: flex;
-  flex-direction: column;
   gap: 2.4rem;
 }
 
 .skills li {
   list-style: none;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.skills-box {
+  row-gap: 3.2rem;
+}
+
+.languages,
+.tools {
+  margin-bottom: 4.2rem;
+}
+
+.languages li {
+  padding: 1.2rem 2.4rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 9px;
+}
+
+.tools li {
+  padding: 1.2rem 2.4rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 9px;
 }
 
 .certificates {
-  grid-column: 4 / -1;
-}
-
-.resume-link {
-  justify-items: center;
-  align-items: center;
+  grid-column: 1 / -1;
 }
 
 /*****************/
 /**** PROJECTS *****/
 /*****************/
 .section-projects {
-  padding: 0 3.6rem 9.6rem 3.6rem;
+  padding: 9.6rem 3.6rem 0 3.6rem;
+  margin-bottom: 9.6rem;
 }
 
-.webpages {
-  padding-bottom: 4.8rem;
+.project-images {
+  position: relative;
 }
 
-.project-tile {
-  background-color: #c9fbff;
-  padding: 4.8rem;
-  border-radius: 11px;
-  box-shadow: 4px 2px 3px #f7f7f7;
-
-  transition: all 0.4s;
-}
-
-.project-tile:hover {
-  transform: scale(1.1);
-}
-
-.project-name {
-  font-size: 1.6rem;
+.project-subheading {
+  color: var(--primary-color);
   font-weight: 500;
-  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1.8rem;
 }
 
-.project-links {
-  font-size: 1.4rem;
+.project-title {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 3.2rem;
 }
 
-.pens {
-  padding-bottom: 5.6rem;
+.project-wrapper {
+  margin-bottom: 9.6rem;
 }
 
-.profile-links {
+.img--1 {
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.img-mobile {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.img--2,
+.img--3,
+.img--4 {
+  width: 32%;
+}
+
+.description-wrapper {
+  align-self: center;
+}
+
+.project-desc {
+  font-size: 1.8rem;
+  line-height: 1.8;
+
+  margin-bottom: 1.8rem;
+}
+
+.project-action-btns {
+  display: flex;
+  gap: 2.4rem;
   align-items: center;
-  justify-items: center;
+}
+
+.project-action-btns .btn:link,
+.project-action-btns .btn:visited {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.view-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*****************/
+/**** CONTACT SECTION *****/
+/*****************/
+.contact {
+  text-align: center;
+
+  padding: 9.6rem 3.6rem 0 3.6rem;
+  margin-bottom: 9.6rem;
+}
+
+.contact-text {
+  font-size: 2rem;
+  margin-bottom: 4.8rem;
+  line-height: 1.8;
+}
+
+.btn:link,
+.btn:visited {
+  padding: 1.2rem 2.4rem;
+  color: var(--primary-color);
+  border: 3px solid var(--primary-color);
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  border-radius: 9px;
+  text-decoration: none;
+
+  transition: all 0.3s;
+
+  position: relative;
+  z-index: 1;
+}
+
+.btn:link::before,
+.btn:visited::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+
+  background-color: var(--primary-color);
+
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  color: var(--white);
+}
+
+.btn:hover::before,
+.btn:active::before {
+  width: 100%;
 }
 
 /*****************/
@@ -221,22 +402,54 @@ footer {
   padding: 3.6rem;
 }
 
-.contact-box {
+.social-links {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
-  margin-bottom: 3.6rem;
+
+  gap: 2.4rem;
+
+  margin-bottom: 2.4rem;
+}
+
+.social-links {
+  list-style: none;
+}
+
+.social-links a:link,
+.social-links a:visited {
+  text-decoration: none;
+  color: #333;
+
+  transition: all 0.3s;
+}
+
+.social-links a:hover,
+.social-links a:active {
+  color: var(--primary-color);
+}
+
+.social-links a:hover .icon,
+.social-links a:visited .icon {
+  transform: scale(1.2);
+}
+
+.social-links .icon {
+  width: 3rem;
+  height: 3rem;
+
+  transition: all 0.3s;
 }
 
 footer p {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-align: center;
   margin-bottom: 2.4rem;
 }
 
-footer .portfolio-link:link,
-footer .portfolio-link:visited {
+footer .copyright-text {
   color: #040f0f;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -262,7 +475,7 @@ footer .portfolio-link:visited {
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: #c2fcf7;
+  background-color: var(--tint1);
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
 

@@ -7,9 +7,10 @@ const headerEl = document.querySelector(".header");
 const allLinks = document.querySelectorAll(".nav-link:link");
 allLinks.forEach(function (a) {
   a.addEventListener("click", function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     const href = a.getAttribute("href");
     if (href != "#" && href.startsWith("#")) {
+      e.preventDefault();
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({
         behavior: "smooth",
