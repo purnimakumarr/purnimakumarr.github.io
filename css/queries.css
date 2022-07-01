@@ -1,52 +1,45 @@
 /************************/
 /**** MEDIA QUERIES *****/
 /************************/
+
+/* 1344px or below */
+@media (max-width: 84em) {
+  .container {
+    max-width: 120rem;
+  }
+
+  .welcome-main {
+    text-align: center;
+  }
+
+  .welcome .main-heading {
+    font-size: 5rem;
+  }
+
+  .subheading {
+    font-size: 3rem;
+  }
+}
+
+/* 1200px or below */
 @media (max-width: 75em) {
   html {
     font-size: 56.25%;
   }
 }
 
+/* 944px or below */
 @media (max-width: 59em) {
   html {
     font-size: 50%;
   }
 
-  .heading-primary {
-    font-size: 3.6rem;
-  }
-
-  .heading-secondary {
+  body {
     font-size: 1.6rem;
   }
 
-  .project-tile {
-    padding: 2.4rem;
-  }
-
-  .project-box {
-    column-gap: 2.4rem;
-  }
-}
-
-@media (max-width: 44em) {
-  .welcome {
-    margin-top: 0;
-  }
-
-  .grid--5-cols {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 3.6rem;
-  }
-
-  .certificates,
-  .frameworks {
-    grid-column: 2 / span 2;
-  }
-
-  .grid--3-cols {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 3.6rem;
+  .heading-primary {
+    font-size: 4.8rem;
   }
 
   /* MOBILE NAVIGATION */
@@ -70,6 +63,7 @@
   .header {
     position: relative;
     background-color: var(--tint1);
+    padding: 1.2rem;
   }
 
   .sticky .header {
@@ -100,47 +94,84 @@
 
     height: 100vh;
     transition: all 0.5s ease-in;
-    background-color: rgb(194, 252, 247);
-    backdrop-filter: blur(15px);
+    background-color: var(--tint1);
+    backdrop-filter: blur(20px);
   }
 
   .navbar-list {
     margin: 0;
-    gap: 5.6rem;
+    gap: 6.4rem;
   }
 
   .main-navbar li {
-    font-size: 4.8rem;
+    font-size: 3rem;
   }
 }
 
-@media (max-width: 34em) {
-  .grid--5-cols {
-    grid-template-columns: 1fr;
-  }
-
-  .certificates,
-  .frameworks {
-    grid-column: 1 / -1;
-  }
-
-  .grid--3-cols {
-    grid-template-columns: 1fr;
-  }
-
+/* 704px or below */
+@media (max-width: 44em) {
   .grid--2-cols {
     grid-template-columns: 1fr;
-    row-gap: 2.4rem;
   }
 
-  .welcome-btns {
-    grid-template-columns: 10rem;
-    row-gap: 2.4rem;
-    justify-items: center;
-    justify-content: center;
+  .tools {
+    justify-self: start;
   }
 
-  footer p {
+  .project-wrapper .grid {
+    row-gap: 3.6rem;
+  }
+
+  .images-portfolio {
+    grid-row: 1;
+  }
+
+  .main-profile-wrapper {
+    width: 50%;
+    height: 50%;
+  }
+
+  .greeting-text {
+    font-size: 3.6rem;
+  }
+}
+
+/* 544px or below */
+@media (max-width: 34em) {
+  .logo:link,
+  .logo:visited {
+    gap: 1.8rem;
+  }
+  .main-profile-wrapper {
+    width: 60%;
+    height: 60%;
+  }
+
+  .heading-primary {
+    font-size: 3.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.4rem;
+  }
+
+  .project-title {
+    font-size: 2.8rem;
+  }
+
+  .greeting-text {
+    font-size: 3rem;
+  }
+
+  .logo span {
     font-size: 1.4rem;
+  }
+}
+
+/* 288px or below */
+@media (max-width: 20em) {
+  .main-profile-wrapper {
+    width: 75%;
+    height: 75%;
   }
 }

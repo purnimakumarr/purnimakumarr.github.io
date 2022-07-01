@@ -7,14 +7,13 @@
 
   height: 8rem;
   width: 100%;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
   padding: 1.2rem 4.8rem;
 
   z-index: 999;
-}
 
-.main-navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -56,7 +55,7 @@
 .nav-link:link,
 .nav-link:visited {
   text-decoration: none;
-  color: #333;
+  color: var(--gray);
   position: relative;
 
   transition: all 0.3s;
@@ -74,7 +73,7 @@
   height: 3px;
   background-color: var(--primary-color);
 
-  transition: all 0.5s;
+  transition: all 0.3s;
 
   z-index: -1;
 }
@@ -122,11 +121,10 @@
   z-index: 999;
 
   display: none;
-  margin-right: 2.4rem;
 }
 
 .icon {
-  stroke: #040f0f;
+  stroke: var(--black);
   width: 48px;
   height: 48px;
 }
@@ -139,20 +137,21 @@
 /**** WELCOME *****/
 /*****************/
 .welcome {
-  padding: 0 3.6rem;
   background-color: var(--tint1);
-  margin-bottom: 9.6rem;
+  padding-bottom: 9.6rem;
 }
 
 .welcome .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 90vh;
 }
 
-.heading-primary.main-heading {
+.welcome .main-heading {
   text-transform: none;
-  font-size: 6rem;
+  font-size: 5.6rem;
+  margin: 0;
 }
 
 .subheading {
@@ -160,7 +159,8 @@
   font-size: 3.2rem;
   line-height: 1.8;
   text-transform: uppercase;
-  color: #333;
+  color: var(--gray);
+  margin-bottom: 2.2rem;
 }
 
 /*****************/
@@ -168,18 +168,25 @@
 /*****************/
 
 .about {
-  padding: 9.6rem 3.6rem 0 3.6rem;
-  margin-bottom: 9.6rem;
+  padding: 9.6rem 0;
   text-align: center;
 }
 
+.description-box {
+  padding: 0 3.6rem;
+}
+
 .main-profile-wrapper {
-  padding: 12px;
+  padding: 8px;
   border-radius: 50%;
   border: 3px solid var(--primary-color);
   width: 30%;
   height: 30%;
   margin: 0 auto 3.2rem auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-profile {
@@ -189,7 +196,7 @@
 
 .greeting-text {
   font-size: 4.8rem;
-  color: #333;
+  color: var(--gray);
   margin-bottom: 3.6rem;
 }
 
@@ -199,30 +206,18 @@
   margin-bottom: 1.2rem;
 }
 
-/* .course-code-link:link,
-.course-code-link:visited {
-  color: #392427;
-  font-weight: 500;
-  transition: all 0.3s;
-}
-
-.course-code-link:active,
-.course-code-link:hover {
-  color: #230c0f;
-} */
-
 /*****************/
 /**** SKILLS *****/
 /*****************/
 
 .skills {
-  padding: 9.6rem 3.6rem 0 3.6rem;
-  margin-bottom: 9.6rem;
+  padding: 9.6rem 0;
 }
 
 .skills ul {
   display: flex;
-  gap: 2.4rem;
+  gap: 3.2rem;
+  flex-wrap: wrap;
 }
 
 .skills li {
@@ -242,14 +237,18 @@
 }
 
 .languages li {
-  padding: 1.2rem 2.4rem;
+  padding: 0.8rem 3.2rem;
   background-color: var(--primary-color);
   color: var(--white);
   border-radius: 9px;
 }
 
+.tools {
+  justify-self: center;
+}
+
 .tools li {
-  padding: 1.2rem 2.4rem;
+  padding: 0.8rem 3.2rem;
   background-color: var(--primary-color);
   color: var(--white);
   border-radius: 9px;
@@ -263,8 +262,7 @@
 /**** PROJECTS *****/
 /*****************/
 .section-projects {
-  padding: 9.6rem 3.6rem 0 3.6rem;
-  margin-bottom: 9.6rem;
+  padding: 9.6rem 0;
 }
 
 .project-images {
@@ -282,8 +280,8 @@
 .project-title {
   font-size: 3.6rem;
   font-weight: 500;
-  color: #333;
-  margin-bottom: 3.2rem;
+  color: var(--gray);
+  margin-bottom: 4.8rem;
 }
 
 .project-wrapper {
@@ -341,8 +339,7 @@
 .contact {
   text-align: center;
 
-  padding: 9.6rem 3.6rem 0 3.6rem;
-  margin-bottom: 9.6rem;
+  padding: 9.6rem 0;
 }
 
 .contact-text {
@@ -374,6 +371,7 @@
   position: absolute;
   left: 0;
   top: 0;
+  bottom: 0;
   width: 0;
   height: 100%;
 
@@ -419,7 +417,7 @@ footer {
 .social-links a:link,
 .social-links a:visited {
   text-decoration: none;
-  color: #333;
+  color: var(--gray);
 
   transition: all 0.3s;
 }
@@ -448,21 +446,9 @@ footer p {
 }
 
 footer .copyright-text {
-  color: #040f0f;
+  color: var(--black);
   font-weight: 500;
   text-decoration: none;
-}
-
-/***********************************/
-/**** Fixing Safari flex gap  *****/
-/**********************************/
-
-.no-flexbox-gap .main-navbar .navbar-list li:not(:last-child) {
-  margin-right: 3.6rem;
-}
-
-.no-flexbox-gap .skills li:not(:last-child) {
-  margin-bottom: 2.4rem;
 }
 
 /***********************************/
