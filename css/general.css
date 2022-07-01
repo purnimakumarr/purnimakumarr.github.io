@@ -133,5 +133,5 @@ body {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.8rem var(--shade1);
+  box-shadow: 0 0 0 0.8rem #6bbea4;
 }

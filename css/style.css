@@ -90,7 +90,7 @@
 
 .nav-link--action:link,
 .nav-link--action:visited {
-  border: 3px solid var(--primary-color);
+  border: 0.3rem solid var(--primary-color);
   border-radius: 9px;
   padding: 1.2rem 2.4rem;
   color: var(--primary-color);
@@ -145,7 +145,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 75vh;
 }
 
 .welcome .main-heading {
@@ -352,7 +352,7 @@
 .btn:visited {
   padding: 1.2rem 2.4rem;
   color: var(--primary-color);
-  border: 3px solid var(--primary-color);
+  border: 0.3rem solid var(--primary-color);
   font-size: 2rem;
   letter-spacing: 0.5px;
   font-weight: 500;
@@ -360,35 +360,12 @@
   text-decoration: none;
 
   transition: all 0.3s;
-
-  position: relative;
-  z-index: 1;
-}
-
-.btn:link::before,
-.btn:visited::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 0;
-  height: 100%;
-
-  background-color: var(--primary-color);
-
-  z-index: -1;
-  transition: all 0.3s;
 }
 
 .btn:hover,
 .btn:active {
   color: var(--white);
-}
-
-.btn:hover::before,
-.btn:active::before {
-  width: 100%;
+  background-color: var(--primary-color);
 }
 
 /*****************/
